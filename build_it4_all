@@ -26,9 +26,9 @@ echo "DONE"
 fi
 
 ### D6603
-./mkbootimg --cmdline "androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0xb7 ehci-hcd.park=3 dwc3.maximum_speed=high dwc3_msm.prop_chg_detect=Y" --base 0x00000000 --kernel ../final_files/zImage --ramdisk ramdiskD6603.cpio.gz --ramdisk_offset 0x02000000 -o boot_D6603.img --dt ../final_files/dt.img --tags_offset 0x01E00000
+./mkbootimg --cmdline "androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0xb7 ehci-hcd.park=3 dwc3.maximum_speed=high dwc3_msm.prop_chg_detect=Y" --base 0x00000000 --kernel ../final_files/zImage --ramdisk ramdiskD6603.cpio.gz --ramdisk_offset 0x02000000 -o boot_D6603_adv.img --dt ../final_files/dt.img --tags_offset 0x01E00000
 ### D6653
-./mkbootimg --cmdline "androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0xb7 ehci-hcd.park=3 dwc3.maximum_speed=high dwc3_msm.prop_chg_detect=Y" --base 0x00000000 --kernel ../final_files/zImage --ramdisk ramdiskD6653.cpio.gz --ramdisk_offset 0x02000000 -o boot_D6653.img --dt ../final_files/dt.img --tags_offset 0x01E00000
+./mkbootimg --cmdline "androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0xb7 ehci-hcd.park=3 dwc3.maximum_speed=high dwc3_msm.prop_chg_detect=Y" --base 0x00000000 --kernel ../final_files/zImage --ramdisk ramdiskD6653.cpio.gz --ramdisk_offset 0x02000000 -o boot_D6653_adv.img --dt ../final_files/dt.img --tags_offset 0x01E00000
 
 
 ### Build kernel for Z3 Compact
@@ -55,9 +55,9 @@ echo "DONE"
 fi
 
 ### D5803
-./mkbootimg --cmdline "androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0xb7 ehci-hcd.park=3 dwc3.maximum_speed=high dwc3_msm.prop_chg_detect=Y" --base 0x00000000 --kernel ../final_files/zImage --ramdisk ramdiskD5803.cpio.gz --ramdisk_offset 0x02000000 -o boot_D5803.img --dt ../final_files/dt.img --tags_offset 0x01E00000
+./mkbootimg --cmdline "androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0xb7 ehci-hcd.park=3 dwc3.maximum_speed=high dwc3_msm.prop_chg_detect=Y" --base 0x00000000 --kernel ../final_files/zImage --ramdisk ramdiskD5803.cpio.gz --ramdisk_offset 0x02000000 -o boot_D5803_adv.img --dt ../final_files/dt.img --tags_offset 0x01E00000
 ### D5833
-./mkbootimg --cmdline "androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0xb7 ehci-hcd.park=3 dwc3.maximum_speed=high dwc3_msm.prop_chg_detect=Y" --base 0x00000000 --kernel ../final_files/zImage --ramdisk ramdiskD5833.cpio.gz --ramdisk_offset 0x02000000 -o boot_D5833.img --dt ../final_files/dt.img --tags_offset 0x01E00000
+./mkbootimg --cmdline "androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0xb7 ehci-hcd.park=3 dwc3.maximum_speed=high dwc3_msm.prop_chg_detect=Y" --base 0x00000000 --kernel ../final_files/zImage --ramdisk ramdiskD5833.cpio.gz --ramdisk_offset 0x02000000 -o boot_D5833_adv.img --dt ../final_files/dt.img --tags_offset 0x01E00000
 
 << "#__CO__"
 ### Build kernel for Z3 Tablet Compact SGP621
@@ -84,7 +84,7 @@ echo "DONE"
 fi
 
 ### SGP621
-./mkbootimg --cmdline "androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0xb7 ehci-hcd.park=3 dwc3.maximum_speed=high dwc3_msm.prop_chg_detect=Y" --base 0x00000000 --kernel ../final_files/zImage --ramdisk ramdiskSGP621.cpio.gz --ramdisk_offset 0x02000000 -o boot_SGP621.img --dt ../final_files/dt.img --tags_offset 0x01E00000
+./mkbootimg --cmdline "androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0xb7 ehci-hcd.park=3 dwc3.maximum_speed=high dwc3_msm.prop_chg_detect=Y" --base 0x00000000 --kernel ../final_files/zImage --ramdisk ramdiskSGP621.cpio.gz --ramdisk_offset 0x02000000 -o boot_SGP621_adv.img --dt ../final_files/dt.img --tags_offset 0x01E00000
 
 ### Build kernel for Z3 Tablet Compact SGP611
 rm ./arch/arm/boot/*.dtb
@@ -110,7 +110,7 @@ echo "DONE"
 fi
 
 ### SGP611
-./mkbootimg --cmdline "androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0xb7 ehci-hcd.park=3 dwc3.maximum_speed=high dwc3_msm.prop_chg_detect=Y" --base 0x00000000 --kernel ../final_files/zImage --ramdisk ramdiskSGP611.cpio.gz --ramdisk_offset 0x02000000 -o boot_SGP611.img --dt ../final_files/dt.img --tags_offset 0x01E00000
+./mkbootimg --cmdline "androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0xb7 ehci-hcd.park=3 dwc3.maximum_speed=high dwc3_msm.prop_chg_detect=Y" --base 0x00000000 --kernel ../final_files/zImage --ramdisk ramdiskSGP611.cpio.gz --ramdisk_offset 0x02000000 -o boot_SGP611_adv.img --dt ../final_files/dt.img --tags_offset 0x01E00000
 #__CO__
 
 ### Build kernel for Z2
@@ -137,16 +137,16 @@ echo "DONE"
 fi
 
 ### D6503
-./mkbootimg --cmdline "androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0xb7 ehci-hcd.park=3 dwc3.maximum_speed=high dwc3_msm.prop_chg_detect=Y" --base 0x00000000 --kernel ../final_files/zImage --ramdisk ramdiskD6503.cpio.gz --ramdisk_offset 0x02000000 -o boot_D6503.img --dt ../final_files/dt.img --tags_offset 0x01E00000
+./mkbootimg --cmdline "androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0xb7 ehci-hcd.park=3 dwc3.maximum_speed=high dwc3_msm.prop_chg_detect=Y" --base 0x00000000 --kernel ../final_files/zImage --ramdisk ramdiskD6503.cpio.gz --ramdisk_offset 0x02000000 -o boot_D6503_adv.img --dt ../final_files/dt.img --tags_offset 0x01E00000
 
 
 ### Copy img to my desktop
-dd if=./boot_D6603.img of="/mnt/hgfs/VMShare/Android Image Kitchen20/boot_D6603.img"
-dd if=./boot_D6653.img of="/mnt/hgfs/VMShare/Android Image Kitchen20/boot_D6653.img"
-dd if=./boot_D5803.img of="/mnt/hgfs/VMShare/Android Image Kitchen20/boot_D5803.img"
-dd if=./boot_D5833.img of="/mnt/hgfs/VMShare/Android Image Kitchen20/boot_D5833.img"
-dd if=./boot_D6503.img of="/mnt/hgfs/VMShare/Android Image Kitchen20/boot_D6503.img"
+dd if=./boot_D6603_adv.img of="/mnt/hgfs/VMShare/Android Image Kitchen20/boot_D6603_adv.img"
+dd if=./boot_D6653_adv.img of="/mnt/hgfs/VMShare/Android Image Kitchen20/boot_D6653_adv.img"
+dd if=./boot_D5803_adv.img of="/mnt/hgfs/VMShare/Android Image Kitchen20/boot_D5803_adv.img"
+dd if=./boot_D5833_adv.img of="/mnt/hgfs/VMShare/Android Image Kitchen20/boot_D5833_adv.img"
+dd if=./boot_D6503_adv.img of="/mnt/hgfs/VMShare/Android Image Kitchen20/boot_D6503_adv.img"
 << "#__CO__"
-dd if=./boot_SGP621.img of="/mnt/hgfs/VMShare/Android Image Kitchen20/boot_SGP621.img"
-dd if=./boot_SGP611.img of="/mnt/hgfs/VMShare/Android Image Kitchen20/boot_SGP611.img"
+dd if=./boot_SGP621_adv.img of="/mnt/hgfs/VMShare/Android Image Kitchen20/boot_SGP621_adv.img"
+dd if=./boot_SGP611_adv.img of="/mnt/hgfs/VMShare/Android Image Kitchen20/boot_SGP611_adv.img"
 #__CO__
